@@ -1,3 +1,5 @@
+using ABJAD.ParseEngine.Types;
+
 namespace ABJAD.ParseEngine.Expressions;
 
 public class GroupExpression : Expression
@@ -8,4 +10,9 @@ public class GroupExpression : Expression
     }
 
     public Expression Target { get; }
+
+    public DataType GetDataType()
+    {
+        throw new NotImplementedException();
+    }
 }

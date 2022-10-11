@@ -1,3 +1,5 @@
+using ABJAD.ParseEngine.Types;
+
 namespace ABJAD.ParseEngine.Expressions;
 
 public class CallExpression : Expression
@@ -9,5 +11,10 @@ public class CallExpression : Expression
     }
 
     public PrimitiveExpression Method { get; }
-    public List<Expression> Arguments { get; }   
+    public List<Expression> Arguments { get; }
+
+    public DataType GetDataType()
+    {
+        throw new NotImplementedException();
+    }
 }

@@ -1,3 +1,5 @@
+using ABJAD.ParseEngine.Types;
+
 namespace ABJAD.ParseEngine.Expressions;
 
 public class InstantiationExpression : Expression
@@ -10,4 +12,9 @@ public class InstantiationExpression : Expression
 
     public PrimitiveExpression Class { get; }
     public List<Expression> Arguments { get; }
+
+    public DataType GetDataType()
+    {
+        throw new NotImplementedException();
+    }
 }

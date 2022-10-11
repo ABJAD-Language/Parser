@@ -10,4 +10,10 @@ public class StringDataTypeTest
     {
         Assert.Equal("STRING", new StringDataType().GetValue());
     }
+
+    [Fact]
+    private void ReturnsTrueOnEqualCheckWithStringDataType()
+    {
+        Assert.True(new StringDataType() == new StringDataType());
+    }
 }

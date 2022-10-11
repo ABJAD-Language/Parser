@@ -1,3 +1,5 @@
+using ABJAD.ParseEngine.Types;
+
 namespace ABJAD.ParseEngine.Expressions.Unary;
 
 public class ToStringExpression : Expression
@@ -8,4 +10,9 @@ public class ToStringExpression : Expression
     }
 
     public Expression Target { get; }
+
+    public DataType GetDataType()
+    {
+        throw new NotImplementedException();
+    }
 }

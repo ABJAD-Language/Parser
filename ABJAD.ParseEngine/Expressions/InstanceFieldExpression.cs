@@ -1,3 +1,5 @@
+using ABJAD.ParseEngine.Types;
+
 namespace ABJAD.ParseEngine.Expressions;
 
 public class InstanceFieldExpression : Expression
@@ -10,4 +12,9 @@ public class InstanceFieldExpression : Expression
 
     public PrimitiveExpression Instance { get; }
     public IEnumerable<PrimitiveExpression> Fields { get; }
+
+    public DataType GetDataType()
+    {
+        throw new NotImplementedException();
+    }
 }
