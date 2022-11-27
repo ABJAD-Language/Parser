@@ -13,6 +13,6 @@ public class ToStringExpression : Expression
 
     public DataType GetDataType()
     {
-        throw new NotImplementedException();
+        return DataType.String();
     }
 }

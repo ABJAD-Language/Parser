@@ -11,8 +11,5 @@ public abstract class UnaryExpression : Expression
 
     public Expression Target { get; }
 
-    public DataType GetDataType()
-    {
-        throw new NotImplementedException();
-    }
+    public abstract DataType GetDataType();
 }

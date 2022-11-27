@@ -14,6 +14,6 @@ public class StringDataTypeTest
     [Fact]
     private void ReturnsTrueOnEqualCheckWithStringDataType()
     {
-        Assert.True(new StringDataType() == new StringDataType());
+        Assert.True(new StringDataType().Equals(new StringDataType()));
     }
 }

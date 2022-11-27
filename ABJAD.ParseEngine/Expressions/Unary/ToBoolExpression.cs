@@ -6,6 +6,11 @@ public class ToBoolExpression : Expression
 {
     public ToBoolExpression(Expression target)
     {
+        if (!target.GetDataType().IsString())
+        {
+            throw new InvalidExpressionTypeException(DataType.String());
+        }
+        
         Target = target;
     }
 
@@ -13,6 +18,6 @@ public class ToBoolExpression : Expression
 
     public DataType GetDataType()
     {
-        throw new NotImplementedException();
+        return DataType.Bool();
     }
 }

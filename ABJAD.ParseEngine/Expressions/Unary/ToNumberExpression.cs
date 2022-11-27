@@ -6,6 +6,11 @@ public class ToNumberExpression : Expression
 {
     public ToNumberExpression(Expression target)
     {
+        if (!target.GetDataType().IsString())
+        {
+            throw new InvalidExpressionTypeException(DataType.String());
+        }
+        
         Target = target;
     }
 
@@ -13,6 +18,6 @@ public class ToNumberExpression : Expression
 
     public DataType GetDataType()
     {
-        throw new NotImplementedException();
+        return DataType.Number();
     }
 }

@@ -28,4 +28,30 @@ public interface DataType
     {
         return new CustomDataType(value);
     }
+
+    public bool IsString()
+    {
+        return this is StringDataType;
+    }
+
+    public bool IsNumber()
+    {
+        return this is NumberDataType;
+    }
+
+    public bool IsBool()
+    {
+        return this is BoolDataType;
+    }
+
+    public bool IsVoid()
+    {
+        return this is VoidDataType;
+    }
+
+    public bool Is(string type)
+    {
+        return this is CustomDataType customDataType && customDataType.GetValue() == type;
+    }
+
 }
