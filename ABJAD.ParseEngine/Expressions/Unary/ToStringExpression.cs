@@ -6,6 +6,11 @@ public class ToStringExpression : Expression
 {
     public ToStringExpression(Expression target)
     {
+        if (!target.GetDataType().IsNumber() && !target.GetDataType().IsBool())
+        {
+            throw new InvalidExpressionTypeException(DataType.Bool(), DataType.Number());
+        }
+        
         Target = target;
     }
 

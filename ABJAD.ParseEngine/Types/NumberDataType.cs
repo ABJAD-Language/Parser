@@ -6,4 +6,14 @@ public class NumberDataType : DataType
     {
         return "NUMBER";
     }
+    
+    public override bool Equals(object? obj)
+    {
+        return obj is NumberDataType;
+    }
+
+    public override int GetHashCode()
+    {
+        return GetValue().GetHashCode();
+    }
 }

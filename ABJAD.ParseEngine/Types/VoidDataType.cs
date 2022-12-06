@@ -6,4 +6,14 @@ public class VoidDataType : DataType
     {
         return "VOID";
     }
+    
+    public override bool Equals(object? obj)
+    {
+        return obj is VoidDataType;
+    }
+
+    public override int GetHashCode()
+    {
+        return GetValue().GetHashCode();
+    }
 }

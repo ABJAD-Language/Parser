@@ -6,10 +6,14 @@ public class SubtractionExpression : BinaryExpression
 {
     public SubtractionExpression(Expression firstOperand, Expression secondOperand) : base(firstOperand, secondOperand)
     {
+        if (!firstOperand.GetDataType().IsNumber())
+        {
+            throw new InvalidExpressionTypeException(DataType.Number(), DataType.String());
+        }
     }
 
     public override DataType GetDataType()
     {
-        throw new NotImplementedException();
+        return DataType.Number();
     }
 }

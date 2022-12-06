@@ -6,4 +6,14 @@ public class StringDataType : DataType
     {
         return "STRING";
     }
+    
+    public override bool Equals(object? obj)
+    {
+        return obj is StringDataType;
+    }
+
+    public override int GetHashCode()
+    {
+        return GetValue().GetHashCode();
+    }
 }

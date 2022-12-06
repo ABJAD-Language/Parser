@@ -13,4 +13,13 @@ public class CustomDataType : DataType
     {
         return value;
     }
+    public override bool Equals(object? obj)
+    {
+        return obj is CustomDataType customDataType && value == customDataType.GetValue();
+    }
+
+    public override int GetHashCode()
+    {
+        return value.GetHashCode();
+    }
 }
